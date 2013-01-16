@@ -1,0 +1,33 @@
+---
+layout: default
+title: I'm Steven Zhang
+---
+<div class="row">
+  <div class="span8">
+    {% for post in site.posts limit:10 %}
+    <article>
+      <h1><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;{% if post.tagline %}<small>{{ post.tagline }}</small>{% endif %}</h1>
+      <p class="post-date">{{ post.date|date_to_long_string }}</p>
+      {{ post.content }}
+    </article>
+    {% include JB/sharing %}
+    {% endfor %}
+    <p><a href="/archive.html">Read older blogs...</a></p>
+  </div>
+  <div class="span4">
+    <h4>Links</h4>
+    <ul>
+      <li><a href="guest.html">Guest book</a></li>
+      <li><a href="atom.xml">Feed</a></li>
+      <li><a href="http://github.com/zhzhxtrrk">Github</a></li>
+      <li><a href="http://twitter.com/zhzhxtrrk">Twitter</a></li>
+      <li><a href="http://weibo.com/zhzhxtrrk">Weibo</a></li>
+    </ul>
+    <h4>Interesting sites/blogs/apps</h4>
+    <ul>
+      <li><a href="http://dbanotes.net">DBANotes</a></li>
+      <li><a href="http://hutu.me">小道消息</a></li>
+      <li><a href="http://lx.shellcodes.org">lu4nx</a></li>
+    </ul>
+  </div>
+</div>
